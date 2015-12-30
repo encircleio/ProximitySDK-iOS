@@ -30,4 +30,8 @@
 
 - (void)showBookmarks;
 - (void)setLogLevel;
+
+- (void)enableConsoleLogging:(BOOL) isEnable;
+
+- (void)disableSDK:(BOOL)isDisable;
 @end

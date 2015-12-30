@@ -9,6 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "ECBaseModel.h"
 
+// ECGender and ECAgeGroup should be in sync with server
+typedef NS_ENUM(NSInteger, ECGender) {
+    ECMale = 0,
+    ECFemale = 1,
+};
+
+typedef NS_ENUM(NSInteger, ECAgeGroup) {
+    ECTeenagers = 0,
+    ECYoungAdults = 1,
+    ECMiddleAge = 2,
+    ECSeniorCitizen = 3,
+};
+
 @interface ECConsumer : ECBaseModel
 
 @property (nonatomic, copy) NSString *consumerId;
@@ -16,8 +29,8 @@
 @property (nonatomic) NSInteger loyaltyPoints;
 
 @property (nonatomic, copy) NSString *email;
-@property (nonatomic) NSInteger *ageGroup;
-@property (nonatomic) NSInteger *gender;
+@property (nonatomic) NSInteger ageGroup;
+@property (nonatomic) NSInteger gender;
 
 
 @property (nonatomic, copy) NSArray *tags;

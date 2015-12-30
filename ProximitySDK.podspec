@@ -23,8 +23,7 @@ Pod::Spec.new do |s|
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.author             = { "Akash Kotadia" => "akash@encircle.io" }
-  # s.authors            = { "Akash Kotadia" => "akash@encircle.io" }
-  # s.social_media_url   = "http://twitter.com/Akash Kotadia"
+  s.social_media_url   = "https://twitter.com/akash_kotadia"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #  
   s.platform     = :ios, "7.0"

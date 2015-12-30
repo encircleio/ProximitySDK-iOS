@@ -1,11 +1,3 @@
-#
-#  Be sure to run `pod spec lint ProximitySDK.podspec' to ensure this is a
-#  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
-
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -18,140 +10,50 @@ Pod::Spec.new do |s|
   s.name         = "ProximitySDK"
   s.version      = "0.0.1"
   s.summary      = "Mobile SDK for Proximity Platform of encircle.io"
-
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  ="Proximity SDK is Library to deliver Proximity experience via encircle.io's platform."
+  s.description  = "Proximity SDK is Library to deliver Proximity experience on iOS devices via encircle.io's platform. It leverages beacon or wifi to detect precise context of mobile user."
 
   s.homepage     = "http://www.encircle.io"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.screenshots  = "http://encircle.io/img/presskit-brandassets/01-encircleio-platform.jpg"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Licensing your code is important. See http://choosealicense.com for more info.
-  #  CocoaPods will detect a license file if there is a named LICENSE*
-  #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
-  #
-
   s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE.txt" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the authors of the library, with email addresses. Email addresses
-  #  of the authors are extracted from the SCM log. E.g. $ git log. CocoaPods also
-  #  accepts just a name if you'd rather not provide an email address.
-  #
-  #  Specify a social_media_url where others can refer to, for example a twitter
-  #  profile URL.
-  #
-
   s.author             = { "Akash Kotadia" => "akash@encircle.io" }
-  # Or just: s.author    = "Akash Kotadia"
   # s.authors            = { "Akash Kotadia" => "akash@encircle.io" }
   # s.social_media_url   = "http://twitter.com/Akash Kotadia"
 
-  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If this Pod runs only on iOS or OS X, then specify the platform and
-  #  the deployment target. You can optionally include the target after the platform.
-  #
-
-  # s.platform     = :ios
+  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #  
   s.platform     = :ios, "7.0"
 
-  #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
-
-
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
 
   s.source       = { :git => "https://akash_kotadia@bitbucket.org/akash_kotadia/ios_sdk_public.git", :tag => "0.0.1" }
 
-
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
-  #
 
   s.source_files  = "ProximitySDK", "ProximitySDK/**/*.{h}"
   s.public_header_files = "ProximitySDK/**/*.h"
-
   s.ios.vendored_library = "ProximitySDK/libProximitySDK.a"
 
-
-  # s.public_header_files = "Classes/**/*.h"
-
-
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
 
-  # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
   s.resource = "ProximitySDK/ProximitySDKResource.bundle"
 
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
 
   s.framework  = "CoreLocation"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
-
-  # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
-
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
+ 
   s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
-
   s.dependency 'AFNetworking', '2.6.0'
-  s.dependency 'FCUUID', '1.1.4'
-  s.dependency 'XCDYouTubeKit', '2.3.2'
   s.dependency 'SDWebImage', '3.7.3'
-  s.dependency 'StreamingKit', '0.1.25'
-  s.dependency 'ACPDownload', '1.1.0'
-  s.dependency 'UIImageView-PlayGIF', '1.0.5'
   s.dependency 'PubNub', '= 3.7.1'
-  s.dependency 'INTULocationManager', '3.0.3'
-  s.dependency 'SlackTextViewController', '~> 1.7'
-  s.dependency 'SVPullToRefresh', '0.4.1'
-  s.dependency 'SCNetworkReachability', '2.0.4'
-  s.dependency 'TSMessages', '0.9.3'
-  s.dependency 'HexColors', '2.3.0'
   s.dependency 'CocoaLumberjack', '2.0.3'
-  s.dependency 'SCLAlertView-Objective-C', '0.7.7'
 
 end

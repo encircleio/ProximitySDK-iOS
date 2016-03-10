@@ -18,9 +18,7 @@
 
 // Public methods
 - (void)initWithAppId:(NSString *)clientId secret:(NSString *)secret;
-- (void)registerDeviceToken:(NSString *)deviceToken;
 - (ECConsumer *)sharedConsumer;
-- (ECConsumer *)login:(NSString *)consumerId;
 - (void)syncUser:(ECConsumer *)consumer withCallback:(void (^)(ECConsumer *consumer, NSError *error))callback;
 - (void)showBookmarks;
 - (void)enableConsoleLogging:(BOOL) isEnable;

@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://twitter.com/akash_kotadia"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #  
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "7.1"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 

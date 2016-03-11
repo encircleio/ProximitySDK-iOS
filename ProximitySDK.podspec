@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source       = { :git => "https://akash_kotadia@bitbucket.org/akash_kotadia/ios_sdk_public.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/encircleio/ProximitySDK-iOS.git", :tag => "0.0.1" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
